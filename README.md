@@ -9,10 +9,14 @@ A tool to help with database schema and data migration for personal projects.
 # TODO List
 
 - [ ] **Feature Implementation**
-  - [ ] Add new user authentication
-  - [ ] Integrate third-party API
+  - [ ] MySQL - Database Connection
+  - [x] MySQL - Schema Extraction
+  - [ ] Schema Exportation
+    - [x] Export to Json
+    - [ ] Export to XML
+    - [ ] Export to SQL File
 - [ ] **Testing**
-  - [ ] Write unit tests for new features
+  - [ ] Write unit tests for completed features
   - [ ] Add integration tests
 - [ ] **Documentation**
   - [ ] Update project README with latest changes
