@@ -1,5 +1,6 @@
 import mysql.connector
 import json
+from MySQLCRUD import MySQLCRUD
 
 # Database connection settings
 DB_CONFIG = {
@@ -51,4 +52,23 @@ def get_schema():
         print(f"Error: {err}")
 
 if __name__ == "__main__":
-    get_schema()
+    # Extracts the schema from the database
+    # get_schema()
+    
+    # Data management
+    db = MySQLCRUD(DB_CONFIG)
+    
+    # Load the previously extracted schema
+    db.load_schema(OUTPUT_FILE)
+    
+    data = db.read("member")
+    print(data)
+    # Perform CRUD operations on the loaded schema
+    # db.create_table("users", {"name": "VARCHAR(255)", "email": "VARCHAR(255)"})
+    # db.insert_data("users", {"name": "John Doe", "email": "johndoe@example.com"})
+    # db.update_data("users", {"name": "Jane Doe"}, {"id": 1})
+    # db.delete_data("users", {"id": 1})
+    # users = db.select_data("users")
+    # for user in users:
+    #     print(user)
+    

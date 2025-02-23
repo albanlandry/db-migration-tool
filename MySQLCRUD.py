@@ -6,7 +6,7 @@ class MySQLCRUD:
         """Initialize connection and load schema."""
         self.conn = mysql.connector.connect(**dbconfig)
         self.cursor = self.conn.cursor(dictionary=True)
-        self.load_schema()
+        # self.load_schema()
 
     def load_schema(self, schema):
         """Load schema from JSON file."""

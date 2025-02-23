@@ -45,7 +45,9 @@ class Table:
         return f"Table '{self.name}': [{cols}]"
 
     def __repr__(self):
-        return f"Table(name={self.name!r}, columns={self.columns!r})"
+        # Join each column string with a newline so each appears on a separate row.
+        columns_str = "\n".join(self.columns)
+        return f"Table: {self.name}\nColumns:\n{columns_str}"
 
 
 class Schema:
